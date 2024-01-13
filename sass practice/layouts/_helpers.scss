@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+ul li {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+.shown {
+    display: block !important;
+}
+.opened {
+    border-color: tomato !important;
+}
+a {
+    text-decoration: none;
+}

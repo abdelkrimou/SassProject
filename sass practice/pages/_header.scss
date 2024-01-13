@@ -1,0 +1,109 @@
+@use '../layouts/mixins' as * ;
+@use '../layouts/helpers' as *;
+/*Header section css*/
+header {
+    padding: 20px;
+    margin: 0px ;
+    border-bottom: 1px solid gray;
+    position: relative;
+    z-index: 2;
+    .container {
+        margin-bottom: 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include breakpoint("medium") {
+            flex-direction: column;
+            text-align: center;
+            gap : 20px;
+        }
+        @include breakpoint("large") {
+            flex-direction: row;
+            text-align: start;
+        }
+    }
+    .logo {
+        h1 {
+            margin: 0px;
+            text-transform: uppercase;
+            font-family: "Old Standard TT", serif;
+            font-weight: 700;
+            font-style: bold;
+        }
+        p {
+            margin: 0px {
+                top:5px;
+            };
+        }
+    }
+    .toggle-menu {
+        font-size: 30px;
+        border-radius: 5px;
+        border: 1px solid black;
+        padding: 8px 10px {
+            bottom: 5px;
+        };
+        cursor: pointer;
+        &.open {
+            border-color: tomato;
+        }
+        @include breakpoint("medium") {
+            display: none;
+        }
+    }
+    .navbar {
+        display: none;
+        @include breakpoint("mobile") {
+            position: absolute;
+            bottom: 0px;
+            left:0px;
+            transform: translateY(100%);
+            width:100%;
+            li {
+                &:not(:last-of-type){
+                    border-bottom: 1px solid black;
+                }
+            }
+        }
+        @include breakpoint("max-small") {
+            position: absolute;
+            bottom: 0px;
+            left:0px;
+            transform: translateY(100%);
+            width:100%;
+            li {
+                &:not(:last-of-type){
+                    border-bottom: 1px solid black;
+                }
+            }
+        }
+        @include breakpoint("medium") {
+            display: block;
+            border-radius: 10px;
+            ul {
+                background-color: tomato;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+            li {
+                display: inline-block;
+                background-color: tomato;
+                padding: 15px;
+            }
+        }
+        li {                        
+            background-color: tomato;
+            padding: 15px;
+            text-transform: uppercase;
+            color:white;
+            &:hover , &.active {
+            color:black;
+            cursor: pointer;
+            }
+        }
+    }
+}
+
+
+
+

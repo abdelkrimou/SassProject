@@ -1,0 +1,27 @@
+.title-section{
+    position: relative;
+    z-index: 2;
+    margin-bottom: 30px;
+    h2 {
+        width: max-content;
+        font-size: 18px;
+        padding: 8px 20px;
+        background-color: tomato;
+        text-transform: uppercase;
+        color:white;
+        border-radius: 10px;
+        margin: auto;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height:1px;
+            background-color: black;
+            top:50%;
+            transform: translateY(-50%);
+            left:0px;
+            z-index: -1;
+        } 
+    }
+
+}

@@ -1,0 +1,154 @@
+@use '../layouts/mixins' as *;
+
+
+/* Start Landing Page*/
+.landing-page {
+    .container {
+        text-align: center;
+        padding: 20px 10px;
+        q {
+            display: block;
+            margin: auto {
+                bottom: 20px;
+            };
+            width:80%;
+            font-size: 20px;
+            line-height: 2rem;
+            color:gray;
+            font-style: italic;
+        }
+        img {
+            width:100%;
+            height:400px;
+            object-fit: cover;
+        }
+        ul {
+            margin-top: 20px;
+            li {
+                display: inline-block;
+                margin-right: 3px;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: rgb(176, 176, 176);
+                cursor: pointer;
+                &:hover , &.active {
+                    background-color: white;
+                    border: 1px solid black;
+                }
+            }
+        }
+    }
+}
+
+/* Start Service Section*/ 
+
+.service-section {
+    .services {
+        width:100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap:10px;
+        .service-box {
+            @include breakpoint("max-small") {
+                width:100%;
+                text-align: center;
+                .title {
+                    justify-content: center;
+                }
+            }
+            @include breakpoint("medium") {
+                width: calc((100%/3) - 20px)  ;
+            }            
+            .title {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap:8px;
+                .icon {
+                    font-size: 25px;
+                }
+            }
+            p {
+                color:gray;
+                line-height: 1.4rem;
+                margin: 5px 0px;
+            }
+            a {
+                color:tomato;
+            }
+        }
+    }
+
+}
+/* Start Players Section */
+.players-section {
+    .players {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap:10px;
+        .player-box {
+            @include breakpoint("max-small") {
+                width:100%;
+                gap:10px;
+            }
+            @include breakpoint("medium") {
+                width:calc((100% / 2) - 15px);
+            }
+            @include breakpoint("large") {
+                width:calc((100% / 4) - 30px);
+            }
+            .image {
+                width:100%;
+                img {
+                    width:100%;
+                }
+            }
+            .name {
+                font-size: large;
+                span {
+                    font-weight: bold;
+                    font-size: 19px;
+                }
+            }
+            .description {
+                margin: 5px 0px;
+                color:gray;
+            }
+            a {
+                color:tomato
+            }
+        }
+    }
+}
+
+/* Gallery Section */
+.gallery-section {
+    .images {
+        width:100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap:10px;
+        .image-box {
+            height:300px;
+            @include breakpoint ("max-small") {
+                width:100%;
+            }
+            @include breakpoint ("medium") {
+                width:calc((100%/2) - 10px);
+            }
+            @include breakpoint ("large") {
+                width:calc((100%/3) - 20px);
+            }
+            img {
+                width:100%;
+                height:100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

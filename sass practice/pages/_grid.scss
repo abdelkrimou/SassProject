@@ -1,0 +1,29 @@
+@use '../layouts/mixins' as *;
+
+.container {
+    @include breakpoint("mobile") { 
+        width:100%;        
+        padding:10px;
+        margin: auto {
+            bottom: 30px
+        };
+    }
+    @include breakpoint("small") { 
+        width:520px; 
+        padding:10px;
+        margin: auto {
+            bottom: 30px
+        };      
+    }
+    @include breakpoint("medium") { 
+        width:740px;
+    }
+    @include breakpoint("large") { 
+        width:940px;  
+    }
+    @include breakpoint("ex-large") { 
+        width:1190px;
+    }
+
+
+}

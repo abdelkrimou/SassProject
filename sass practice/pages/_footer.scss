@@ -1,0 +1,105 @@
+@use '../layouts/mixins' as *;
+/*Footer Section css*/
+footer {
+    background-color: rgb(198, 198, 198);
+    .container {
+        &>div {
+            padding: 15px;
+        }
+        padding: 20px 10px;
+        margin-bottom: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .title-footer {
+            font-size: 20px;
+            font-weight: medium;
+            margin-bottom: 20px;
+        }
+        .gallery-footer {
+            @include breakpoint("max-small") {
+                width:100%;
+            }
+            @include breakpoint("medium") {
+                width:40%;
+            }
+            .blog {
+                display: flex;
+                flex-wrap: wrap;
+                gap:10px;
+                margin-bottom: 10px;
+                .blog-image {
+                    width:100px;
+                    height:100px;
+                    img {
+                    display: block;
+                    width:100%;
+                    height:100%;
+                }
+                }
+                .blog-details { 
+                    width:calc(100% - 120px);
+                    h4 {
+                        color:tomato
+                    }
+                }
+            }
+        }
+        .company-details {
+            @include breakpoint("mobile") {
+                width:100%;
+                text-align: center;
+            }
+            @include breakpoint("small") {
+                width:50%;
+            }
+            @include breakpoint("medium") {
+                width:30%;
+            }
+            ul {
+                margin-bottom: 10px;
+                span {
+                    color:tomato
+                }
+            }
+            h4 {
+                margin-bottom: 5px;
+            }
+        }
+        .contact {
+            @include breakpoint("mobile") {
+                width:100%;
+                text-align: center;
+            }
+            @include breakpoint("small") {
+                width:50%;
+            }
+            @include breakpoint("medium") {
+                width:30%;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                gap:8px;
+                input,textarea {
+                    padding: 5px 10px;
+                }
+                textarea {
+                    height:200px;
+                }
+            }
+            button {
+                width: max-content;
+                padding: 5px 10px;
+                background-color: tomato;
+                text-transform: uppercase;
+                color:white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+
+}
